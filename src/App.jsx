@@ -1,3 +1,5 @@
+import NV from "./components/NV";
+
 import Zxc from "./components/Zxc";
 
 export default function App() {
@@ -6,6 +8,7 @@ export default function App() {
       Hello andrew
       <Zxc />
       <img src="/images/test/personal.png" alt="" />
+      <NV></NV>
     </h1>
   );
 }
