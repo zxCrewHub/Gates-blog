@@ -1,6 +1,6 @@
 
 export const Nadya = () => {
   return (
-    <div>Nadya</div>
+    <div>NadAa</div>
   )
 }
