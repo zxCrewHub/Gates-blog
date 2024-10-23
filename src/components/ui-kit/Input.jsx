@@ -1,18 +1,19 @@
-import React from "react";
-
 const Input = ({ text, placeholder }) => {
   return (
-    <div className="flex items-center bg-gray-200 p-2 rounded w-[406px] h-[46px]">
+    <div className="  w-[406px] h-[46px] flex items-center bg-[#E5E5E5] rounded overflow-hidden shadow-lg">
       <label
-        className="bg-black text-white px-3 py-1 rounded-l hover:bg-[#636363]  mr-2"
-        htmlFor="inputField"
+        className="bg-black text-white px-4 py-1 ml-2 font-semibold  transition-all duration-300 min-w-28 text-center"
+        style={{
+          background: "linear-gradient(180deg, #2C2C2C 0%, #000000 100%)",
+        }}
+        htmlFor={text}
       >
         {text}
       </label>
       <input
-        className="bg-grey-200 focus:outline-none px-3 py-1 w-full rounded-r  "
+        className="px-4 py-3 w-64 bg-[#E5E5E5] text-gray-600 placeholder-gray-500 outline-none border-0 "
         type="text"
-        id="inputField"
+        id={text}
         placeholder={placeholder}
       />
     </div>

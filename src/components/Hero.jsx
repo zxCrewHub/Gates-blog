@@ -1,6 +1,7 @@
 //импортирую этот компонент в Main.jsx
 
-import Lablecomponent from "./Lablecomponent";
+
+import Input from "./ui-kit/Input";
 
 export const Hero = () => {
   return (
@@ -12,7 +13,7 @@ export const Hero = () => {
             Get the latest news on your favourite mangas, anime and manhwa
             around the world!
           </p>
-          <Lablecomponent text="Subscribe" placeholder="Enter your email" />
+          <Input text="Subscribe" placeholder="Enter your email" />
         </div>
       </div>
       <div className="image__wrapper">
