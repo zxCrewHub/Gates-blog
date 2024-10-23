@@ -1,6 +1,5 @@
-import React from "react";
-import Input from "./components/ui-kit/Input";
-import Button from "./components/ui-kit/Button";
+import Input from "../components/ui-kit/Input";
+import Button from "../components/ui-kit/Button";
 
 const Login = () => {
   return (
