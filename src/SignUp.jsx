@@ -1,11 +1,16 @@
 import React from "react";
+import Input from "./components/ui-kit/Input";
+import Button from "./components/ui-kit/Button";
 
 const SignUp = () => {
   return (
-    <div>
-      <p className="font-bold">Имя:</p>
-      <p className="font-bold">Фамилия:</p>
-      <p className="font-bold">Почта:</p>
+    <div className=" bg-[url('/public/images/hero/hero_bg.png')] h-screen bg-cover bg-center">
+      <div className="flex flex-col items-center justify-center h-screen gap-2.5">
+        <Input text="Name" placeholder="Enter your name" />
+        <Input text="Surname" placeholder="Enter your surname" />
+        <Input text="Password" placeholder="Enter your password" />
+        <Button text="Sign up" />
+      </div>
     </div>
   );
 };
