@@ -1,26 +1,15 @@
-import { Link } from "react-router-dom";
+import { Header } from "./components/Header";import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
+import { Footer } from "./components/Footer";
 export default function App() {
   return (
-    <div>
-      <header className="text-pink-800 font-bold bg-yellow-200 ">
-        Здравствуйте!
-      </header>
+    <div><Header/>
+      
       <main>
-        <Link to="/login" className="p-2 text-green-800 font-bold">
-          Войти
-        </Link>
-        <Link to="/sign" className="text-green-800 font-bold">
-          Зарегистрироваться
-        </Link>
-        <Link to="/details" className="p-2 text-green-800 font-bold">
-          Подробнее
-        </Link>
+        
         <Outlet></Outlet>
       </main>
-      <footer className="text-pink-800 font-bold bg-yellow-200 ">
-        Контакты
-      </footer>
+      <Footer/>
     </div>
   );
 }
