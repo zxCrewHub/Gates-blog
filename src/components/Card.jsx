@@ -17,7 +17,11 @@ export const Card = ({ obj }) => {
 
   return (
     <div className="max-w-[329px] mt-5">
-      <img src={imageUrl} alt="picture" className="w-[329px] h-[254px]" />
+      <img
+        src={imageUrl}
+        alt="picture"
+        className="w-[329px] h-[254px] object-cover rounded-md"
+      />
       <div className="flex-col justify-between">
         <div className="flex gap-2 text-xs mt-2">
           {tags.map((e) => (
