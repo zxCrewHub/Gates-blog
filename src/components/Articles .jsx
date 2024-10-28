@@ -33,7 +33,7 @@ export const Articles = ({ getData }) => {
             <div
               className="relative p-20 flex flex-col justify-between shadow-lg " // Полупрозрачный белый фон
               style={{
-                backgroundImage: `url(${data[0].imageUrl})`,
+                backgroundImage: `url(images/hero/Rectangle.png)`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -71,7 +71,7 @@ export const Articles = ({ getData }) => {
             <div
               className="relative p-20 flex flex-col justify-between shadow-lg" // Полупрозрачный белый фон
               style={{
-                backgroundImage: `url(${data[1].imageUrl})`,
+                backgroundImage: `url(images/hero/Rectangle.png)`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
