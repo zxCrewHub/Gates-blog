@@ -12,7 +12,7 @@ function Main() {
     } else {
       result = data.error;
     }
-    console.log(result);
+    return (result);
   }
   useEffect(() => {
     getData();
