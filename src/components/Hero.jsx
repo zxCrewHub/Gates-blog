@@ -1,6 +1,5 @@
 //импортирую этот компонент в Main.jsx
 
-
 import Input from "./ui-kit/Input";
 
 export const Hero = () => {

@@ -1,4 +1,5 @@
 import { Hero } from "../components/Hero";
+import Trandingnow from "../components/Trandingnow"
 import { getAllPosts } from "../services/fetch/fetch";
 import { Articles } from "../components/Articles ";
 
@@ -15,6 +16,8 @@ function Main() {
   }
   return (
     <div>
+<Trandingnow></Trandingnow>
+
       <Hero></Hero>
       <Articles getData={getData} />
     </div>
