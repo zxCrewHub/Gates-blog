@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Articles = ({ getData }) => {
     const [data, setData] = useState([]); 
@@ -51,14 +52,14 @@ export const Articles = ({ getData }) => {
                     </div>
                     <div className="flex items-center justify-between relative z-30"> {/* Добавлено z-30 для текста */}
                         <p className="text-black text-sm opacity-75">
-                            {data[0].reads} Min Read
+                            {data[0].reads} Reads
                         </p>
-                        <a
-                            href={data[0].link}
+                        <Link
+                            href={`/details/${data[0].id}`}
                             className="text-black font-semibold hover:underline flex items-center"
                         >
                             Read Full ➔
-                        </a>
+                        </Link>
                     </div>
                 </div>
 
@@ -84,14 +85,14 @@ export const Articles = ({ getData }) => {
                     </div>
                     <div className="flex items-center justify-between relative z-30"> {/* Добавлено z-30 для текста */}
                         <p className="text-black text-sm opacity-75">
-                            {data[1].readTime} Min Read
+                            {data[1].reads} Reads
                         </p>
-                        <a
+                        <Link
                             href={data[1].link}
                             className="text-black font-semibold hover:underline flex items-center"
                         >
                             Read Full ➔
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 {/* Нижний правый угол — изображение */}
