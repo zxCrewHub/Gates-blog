@@ -1,7 +1,7 @@
-import { useEffect } from "react";
 import { Hero } from "../components/Hero";
-import { getAllPosts } from "../services/fetch/fetch";import Trandingnow from "../components/Trandingnow"
-
+import Trandingnow from "../components/Trandingnow"
+import { getAllPosts } from "../services/fetch/fetch";
+import { Articles } from "../components/Articles ";
 
 function Main() {
   async function getData(sort = "", tag = "") {
@@ -14,12 +14,12 @@ function Main() {
     }
     return (result);
   }
-  useEffect(() => {
-    getData();
-  }, []);
   return (
     <div>
-      <Hero></Hero><Trandingnow></Trandingnow>
+<Trandingnow></Trandingnow>
+
+      <Hero></Hero>
+      <Articles getData={getData} />
     </div>
   );
 }
