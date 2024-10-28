@@ -1,5 +1,5 @@
 import { Hero } from "../components/Hero";
-import Trandingnow from "../components/Trandingnow"
+import Trandingnow from "../components/Trandingnow";
 import { getAllPosts } from "../services/fetch/fetch";
 import { Articles } from "../components/Articles ";
 
@@ -12,14 +12,13 @@ function Main() {
     } else {
       result = data.error;
     }
-    return (result);
+    return result;
   }
   return (
     <div>
-<Trandingnow></Trandingnow>
-
       <Hero></Hero>
       <Articles getData={getData} />
+      <Trandingnow getData={getData} />
     </div>
   );
 }

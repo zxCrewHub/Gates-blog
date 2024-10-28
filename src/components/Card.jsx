@@ -1,41 +1,48 @@
-import { useEffect } from "react";
-import { useState } from "react";
+// import { useEffect } from "react";
+// import { useState } from "react";
 
+import { Link } from "react-router-dom";
 
-export const Card = ({ getData }) => {
-  const [data, setData] = useState([]);
-  useEffect(() => {async function fromserver() {
-    setData(await getData('date'))
-  } fromserver();
-}, []);
+export const Card = ({ obj }) => {
+  // const [data, setData] = useState([]);
+  const { id, title, reads, tags, dateOfCreate, content, imageUrl } = obj;
+
+  function getDateAgo(date) {
+    const dateCreate = new Date(date);
+    const createTimeStamp = dateCreate.getTime();
+    const timeAgo = Date.now() - createTimeStamp;
+    const mounth = Math.floor(timeAgo / 2628000000);
+    return `${mounth} mounth ago`;
+  }
+
   return (
-    <div className="h-1/2 w-30% mt-5">
-      <img
-        src={`url(${data[0].imageUrl})`}
-        alt="picture"
-        className="h-1/2 w-full"
-      />
+    <div className="max-w-[329px] mt-5">
+      <img src={imageUrl} alt="picture" className="w-[329px] h-[254px]" />
       <div className="flex-col justify-between">
-        <div className="flex justify-between w-1/2 text-xs mt-2">
-          <a href="#" className="text-slate-500">
-            Fantasy
-          </a>
-          <p className="text-slate-500">1 Mounth Ago</p>
+        <div className="flex gap-2 text-xs mt-2">
+          {tags.map((e) => (
+            <p
+              key={e + title}
+              className="text-white bg-slate-400 rounded-md px-2 py-1"
+            >
+              {e}
+            </p>
+          ))}
         </div>
-        <h2 className="font-bold text-2xl text-slate-800 mt-2">
-          Attack On Titans
-        </h2>
-
-        <p className="text-slate-500 mt-1">
-          {data[0].tags[0]} • {data[0].dateOfCreate}
+        <div>
+          <p className="text-slate-500">{getDateAgo(dateOfCreate)}</p>
+        </div>
+        <h2 className="font-bold text-2xl text-slate-800 mt-2">{title}</h2>
+        <p className="text-black opacity-75 mb-4 h-36 text-ellipsis line-clamp-6">
+          {content}
         </p>
 
         <div className="flex justify-between text-xs mt-2">
-          <p className="text-slate-500">12 Min Redd</p>
+          <p className="text-slate-500">{reads} Reads</p>
           <div className="flex">
-            <a href="/ditailes/1" className="font-bold text-slate-700">
+            <Link to={`/details/${id}`} className="font-bold text-slate-700">
               Read Full
-            </a>
+            </Link>
             <img src="/public/images/hero/arrow.png" alt="arrow" />
           </div>
         </div>
